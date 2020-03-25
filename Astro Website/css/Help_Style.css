@@ -1,0 +1,221 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    animation: drag 2s ease;
+}
+
+main {
+    background: linear-gradient(to left, rgb(179, 178, 178), rgb(230, 230, 230));
+}
+
+.logo-container,.nav-links {
+    display: flex;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.logo-img {
+    height: 45px;
+}
+
+nav {
+    flex: 0.5;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: #5f5f79;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.nav-link:hover {
+    color: #7289da;
+    font-size: 24px;
+    font-weight: 800;
+    transition: 0.4s;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.presentation {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+    animation: drag 2s ease;
+}
+
+.introduction {
+    flex: 1;
+}
+
+.intro-text h1 {
+    font-size: 41px;
+    font-weight: 800;
+    cursor: default;
+    background: linear-gradient(to right, #494964, #7289da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+    margin-top: 5px;
+    font-size: 22px;
+    background: linear-gradient(to right, #494964, #7289da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+}
+
+.cta {
+    padding: 50px 0px 0px 0px;
+}
+
+.cta-discord {
+    border: none;
+    background: #5f5f79;
+    color: white;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.cta-discord:hover {
+    color: white;
+    background: #7289da;
+    font-size: 19px;
+    transition: 0.4s;
+}
+
+.cta-help {
+    border: none;
+    background: #7289da;
+    color: white;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0px 0px 0px 10px;
+    transition: 0.4s;
+}
+
+.cta-help:hover {
+    color: white;
+    background: #5f5f79;
+    font-size: 19px;
+    transition: 0.4s;
+}
+
+.cover {
+    flex: 1;
+}
+
+.cover img {
+    height: 55vh;
+    filter: drop-shadow(0px 18px 15px black);
+    animation: drop 2s ease;
+}
+
+.page {
+    text-align: center;
+    cursor: default;
+    animation: drop 0.5s ease;
+}
+
+.page img {
+    height: 6vh;
+    padding: 5px;
+}
+
+.title {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+}
+
+@keyframes drag {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(1px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-size: 18px;
+    }
+    .cta {
+        padding: 10px 0px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .nav-links {
+        display: none;
+    }
+}
